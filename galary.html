@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEDSN4KE GALLERY</title>
+    <style>
+        /* === FORCED SQUARE IMAGE CONTAINERS === */
+        :root {
+            --matrix-green: #4af626;
+            --blood-red: #ff0a0a;
+            --terminal-bg: #000;
+            --glow: 0 0 10px var(--matrix-green);
+            --border: 2px solid var(--matrix-green);
+            --pixel-font: 'Courier New', monospace;
+        }
+
+        body {
+            font-family: var(--pixel-font);
+            background: var(--terminal-bg) url("https://64.media.tumblr.com/6fd2f248d58f7cf540eb2ba1f90bc6a7/fc642aee9e29cb9f-e6/s2048x3072_c0,12236,100000,87553/188e8a50c3d56e5a4e64fe9a5480f0490cab18b0.gif");
+            background-size: 90%;
+            color: var(--matrix-green);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        #container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* === SQUARE ENFORCEMENT === */
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+
+        .image-container a {
+            display: block;
+            border: var(--border);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.7);
+            aspect-ratio: 1/1; /* Force square containers */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill; /* Stretch to fill container */
+            display: block;
+        }
+
+        /* === REST OF STYLES === */
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-shadow: var(--glow);
+            margin: 0;
+            letter-spacing: -0.2rem;
+        }
+
+        #navbar {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            padding: 1rem;
+            margin: 2rem 0;
+            border: var(--border);
+        }
+
+        #navbar ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        #navbar a {
+            color: var(--matrix-green);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        #navbar a:hover {
+            color: var(--blood-red);
+            text-shadow: 0 0 10px var(--blood-red);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: var(--border);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            #navbar ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .image-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>DEDSN4KE.ONLINE</h1>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="writings.html">Writings</a></li>
+                    <li><a href="galary.html">Gallery</a></li>
+                    <li><a href="https://anlucas.neocities.org/under_construction.gif">Projects</a></li>
+                    <li><a href="https://someplace-else.neocities.org/library">Links</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="image-container">
+            <!-- All images will be forced into squares -->
+            <a target="_blank" href="https://i.imgur.com/vgTQnTQ.jpeg"><img src="https://i.imgur.com/vgTQnTQ.jpeg" alt=""></a>
+            <a target="_blank" href="https://imgur.com/gallery/q1vgWkB"><img src="https://i.imgur.com/oowf5jL.jpeg" alt=""></a>
+            <a target="_blank" href="keepgambaling.jpg"><img src="keepgambaling.jpg" alt=""></a>
+            <a target="_blank" href="thinkpad.jpg"><img src="thinkpad.jpg" alt=""></a>
+            <a target="_blank" href="weed.jpg"><img src="weed.jpg" alt=""></a>
+            <a target="_blank" href="fortnite.png"><img src="fortnite.png" alt=""></a>
+            <a target="_blank" href="view.jpg"><img src="view.jpg" alt=""></a>
+            <a target="_blank" href="https://i.imgur.com/nEzrKSx.jpeg"><img src="https://i.imgur.com/nEzrKSx.jpeg" alt=""></a>
+            <a target="_blank" href="gf.jpeg"><img src="gf.jpeg" alt=""></a>
+            <a target="_blank" href="https://64.media.tumblr.com/004efc681b273bdfbda286b0141165b4/8f612e9840701fba-22/s400x600/0e94fd05f021ab0ff7e6b0d8601878ff6759ab8f.gifv"><img src="https://64.media.tumblr.com/004efc681b273bdfbda286b0141165b4/8f612e9840701fba-22/s400x600/0e94fd05f021ab0ff7e6b0d8601878ff6759ab8f.gifv" alt=""></a>
+            <a target="_blank" href="https://64.media.tumblr.com/1826ae7d89b4a74be0a9922381595957/17c134acc6d84827-c0/s640x960/70d9a44f684990cfacaf6b99227008347dbf3d6e.pnj"><img src="https://64.media.tumblr.com/1826ae7d89b4a74be0a9922381595957/17c134acc6d84827-c0/s640x960/70d9a44f684990cfacaf6b99227008347dbf3d6e.pnj" alt=""></a>
+            <a target="_blank" href="https://64.media.tumblr.com/068dd45ee6868add8b05a561bb023970/046f35a5a3238be4-eb/s2048x3072/dab1750e1a7bb3c8fc90ed77a852b3b0736919f3.jpg"><img src="https://64.media.tumblr.com/068dd45ee6868add8b05a561bb023970/046f35a5a3238be4-eb/s2048x3072/dab1750e1a7bb3c8fc90ed77a852b3b0736919f3.jpg" alt=""></a>
+            <a target="_blank" href="family_guy_door_hasan.jpg"><img src="family_guy_door_hasan.jpg" alt=""></a>
+            <a target="_blank" href="https://64.media.tumblr.com/5d52ff13a57a8c5ec8decdb7b94a55c8/a2d6f4c29abf21fd-c5/s400x600/4ccfed37558d9603fc6f85197d6408c349fea902.gifv"><img src="https://64.media.tumblr.com/5d52ff13a57a8c5ec8decdb7b94a55c8/a2d6f4c29abf21fd-c5/s400x600/4ccfed37558d9603fc6f85197d6408c349fea902.gifv" alt=""></a>
+        </div>
+
+        <footer>
+            <p>[SYSTEM: IMAGE_DISTORTION_PROTOCOL=ACTIVE]</p>
+        </footer>
+    </div>
+</body>
+</html>

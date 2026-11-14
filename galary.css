@@ -1,0 +1,127 @@
+/* General Styles */
+:root {
+    --matrix-green: #4af626;
+    --blood-red: #ff0a0a;
+    --terminal-bg: #000;
+    --glow: 0 0 10px var(--matrix-green);
+    --border: 2px solid var(--matrix-green);
+    --pixel-font: 'Courier New', monospace;
+}
+
+body {
+    font-family: var(--pixel-font);
+    background: var(--terminal-bg) url("https://64.media.tumblr.com/6fd2f248d58f7cf540eb2ba1f90bc6a7/fc642aee9e29cb9f-e6/s2048x3072_c0,12236,100000,87553/188e8a50c3d56e5a4e64fe9a5480f0490cab18b0.gif");
+    background-size: cover;
+    color: var(--matrix-green);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 4rem;
+    text-shadow: var(--glow);
+    margin: 0;
+    letter-spacing: -0.2rem;
+}
+
+/* Navigation */
+#navbar {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    margin: 2rem 0;
+    border: var(--border);
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#navbar a {
+    color: var(--matrix-green);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+    color: var(--blood-red);
+    text-shadow: 0 0 10px var(--blood-red);
+}
+
+/* Gallery Grid */
+#gallery {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.image-container a {
+    display: block;
+    border: var(--border);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-container a:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: var(--border);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
